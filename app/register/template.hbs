@@ -1,0 +1,29 @@
+<div class="col-md-12">
+	<form class="col-md-3 center-block">
+	  <fieldset>
+	    <div class="form-group">
+	      <label class="control-label">Username</label>
+				{{input value=username class="form-control" type="text" name="username"}}
+	      <span class="validation-error"></span>
+	    </div>
+	    <div class="form-group">
+	      <label class="control-label">Email</label>
+	      {{input value=email class="form-control" type="text" name="email"}}
+	      <span class="validation-error"></span>
+	    </div>
+	    <div class="form-group">
+	      <label class="control-label">Password</label>
+	      {{input value=password class="form-control" type="password" name="password"}}
+	      <span class="validation-error"></span>
+	    </div>
+	    <div class="form-group">
+	      <button class="btn btn-primary pull-right" {{action 'addNew'}}>Sign Up!</button>
+	    </div>
+	  </fieldset>
+	</form>
+</div>
+<div class="col-md-12">
+	{{message}}
+</div>
+
+{{outlet}}

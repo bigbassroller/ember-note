@@ -1,0 +1,30 @@
+<div>
+	<div class="col-md-3">
+		<div>Notebooks</div>
+		<div>
+			title: {{input type="text" value=title}}
+			<button {{action 'addNotebook'}}>Add</button>
+		</div>
+		<div>
+			<ul>
+				{{#each model as |notebook|}}
+					<li>
+						{{#link-to 'notebooks.notes' notebook.id}}
+							{{notebook.title}}
+						{{/link-to}}	
+					</li>
+					{{else}}
+						<div>No Notebooks found</div>
+						{{!-- <div><a class="small" href="#">Add new Notebook</a></div> --}}
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+	<div class="col-md-9">
+		{{outlet}}
+	</div>
+</div>
+
+
+
+
